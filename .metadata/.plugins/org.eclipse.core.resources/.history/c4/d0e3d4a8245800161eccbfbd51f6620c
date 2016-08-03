@@ -1,0 +1,57 @@
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class StudentGPAs
+{
+	public static ArrayList<String> students = new ArrayList<String>();
+	public static ArrayList<Integer> student_numbers = new ArrayList<Integer>();
+	public static ArrayList<Double> quiz_marks = new ArrayList<Double>();
+	public static int number_of_students = 4;
+	public static int number_of_quizzes = 5;
+
+	public static void main(String[] args) throws IOException
+	{
+		try 
+		{
+			BufferedReader file_input = new BufferedReader(new FileReader("students.txt"));
+			System.out.println("File opened successfully!");
+			String line;
+			
+			while((line = file_input.readLine()) != null)
+			{
+				String[] split_line = line.split("\\s+");
+				String student = split_line[0];
+				students.add(student);
+				String temp_student_number = split_line[1];
+				int student_number = Integer.parseInt(temp_student_number);
+				student_numbers.add(student_number);
+				
+				for(int i = 2; i < (number_of_quizzes + 2); i++)
+				{
+					String temp_quiz_mark = split_line[i];
+					Double quiz_mark = Double.parseDouble(temp_quiz_mark);
+					quiz_marks.add(quiz_mark);
+				}
+			}
+		} 
+		catch (FileNotFoundException e) 
+		{
+			e.printStackTrace();
+			System.out.println("File I/O error.");
+		}
+		for(int i = 0; i < quiz_marks.size(); i++)
+		{
+			System.out.println(quiz_marks.get(i));
+		}
+	}
+	public static void printer (int student_number, double gpa)
+	{
+		System.out.println("Student number: " + student_number + " GPA: " + gpa);
+	}
+	
+}

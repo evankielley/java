@@ -1,0 +1,44 @@
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+public class PracticeQuestions1
+{
+	public static void main(String[] args) throws IOException
+	{
+		Scanner user_input = new Scanner(System.in);
+		BufferedReader read = new BufferedReader(new FileReader("questions.txt"));
+		String line = "";
+		ArrayList<String> questions = new ArrayList<String>();
+		ArrayList<String> answers = new ArrayList<String>();
+		
+		String break_word = "CANADA";
+		
+		while (!line.contains(break_word))
+		{
+		line = read.readLine();
+		String[] split = line.split(">>");
+		questions.add(split[0]);
+		answers.add(split[1]);
+		//System.out.println(questions.get(0));
+		}
+		for (int i = 1; i < (questions.size() - 1); i++)
+		{
+		System.out.println(questions.get(i));
+		String user_answer = user_input.nextLine();
+		if (user_answer.toLowerCase().contains(answers.get(i).toLowerCase() + "/n"))
+		{
+			System.out.println("Correct!");
+
+		}
+		else
+		{
+			System.out.print("No, the answer is: ");
+			System.out.println(answers.get(i));
+
+		}
+		}
+	}
+}

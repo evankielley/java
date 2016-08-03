@@ -1,0 +1,97 @@
+public class SalesTransaction
+{
+	private static int counter = 1;
+	public final int transaction_number;
+	private static int order_quantity = 0;
+	public final int total_quantity;
+	private String size;
+	private double cost;
+	private int quantity;
+	
+	public SalesTransaction(String size, double cost, int quantity)
+	{	
+		this.size = size;
+		this.cost = cost;
+		this.quantity = quantity;
+		
+		this.transaction_number = counter++;
+		this.total_quantity = (order_quantity + this.quantity);
+	}
+	
+	public static double discountAmount(int quantity, double cost)
+	{
+		double discount_amount = 0;	
+		if (quantity > 20)
+		{
+			discount_amount = cost * 0.10;
+		}	
+		return discount_amount;
+	}
+	
+	public static double totalCostBeforeTax(SalesTransaction temp)
+	{
+		double total_cost;
+		int quantity = temp.quantity;
+		double cost = temp.cost;
+		total_cost = quantity * cost;
+		double discount_amount = discountAmount(quantity, total_cost);
+		total_cost = total_cost - discount_amount;
+		return total_cost;
+	}
+	
+	public static double totalCostAfterTax(double total_cost)
+	{
+		total_cost = total_cost * 1.15;
+		return total_cost;
+	}
+	
+	public static void printStats(SalesTransaction temp)
+	{
+		System.out.println("Transaction Number: " + temp.transaction_number);
+		System.out.println("Size: " + temp.size);
+		System.out.println("Cost Per Table: "+ temp.cost);
+		System.out.println("Number of Tables: " + temp.quantity);
+		System.out.println("Total Tables So Far: " + temp.total_quantity);
+		double total_cost_before_tax = totalCostBeforeTax(temp);
+		double discount_amount = discountAmount(temp.quantity, total_cost_before_tax);
+		System.out.println("Discount: " + discount_amount);
+		double total_cost_after_tax = totalCostAfterTax(total_cost_before_tax); 
+		System.out.println("Total Cost: " + total_cost_after_tax);
+		System.out.println();
+	}
+	
+	
+/*	
+	public String getSize() {
+		return size;
+	}
+
+	public double getCost() {
+		return cost;
+	}
+
+	public void setCost(double cost) {
+		this.cost = cost;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
+	public int getTransaction_number() {
+		return transaction_number;
+	}
+
+	public int getTotal_quantity() {
+		return total_quantity;
+	}
+*/
+	public static void main(String[] args)
+	{
+		
+	}
+}

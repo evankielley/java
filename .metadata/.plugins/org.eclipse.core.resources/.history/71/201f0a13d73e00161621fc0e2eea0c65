@@ -1,0 +1,30 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+public class LowFlights
+{
+	public static void main(String[] args)
+	{
+		String[] destinations = {"Toronto", "Winnipeg", "London", "Ottawa", "Miami"};
+		int[] pointCosts = {75, 90, 110, 75, 95, 95};
+		int low = Array.getInt(pointCosts, 0);
+		ArrayList<Integer> lowIndices = new ArrayList<Integer>();
+		
+		for (int i = 1; i < pointCosts.length; i++)
+		{
+			if (pointCosts[i] < pointCosts[i-1])
+			{
+				low = Array.getInt(pointCosts, i);
+			}
+		}
+		for (int i = 0; i < pointCosts.length; i++)
+		{
+			if (pointCosts[i] == low)
+			{
+				lowIndices.add(i);
+			}
+		}
+		System.out.println(low);
+		System.out.println(lowIndices);
+
+	}
+}

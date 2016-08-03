@@ -1,0 +1,136 @@
+import java.util.ArrayList;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class SortList
+{	
+	public static void main(String[] args)
+	{
+		String[] names = {"bob", "joe", "ann", "sue", "tom", "zita"};
+		for (int i = 0; i < 1; i++)
+		{
+			printArray(order(names, i, findNext(names, i)));
+		}	
+	}
+
+	
+	public static void printArray(String[] names)
+	{
+		for (int i = 0; i < names.length; i++)
+		{
+			System.out.println(names[i]);
+		}
+	}
+	
+	public static String[] order(String names[], int something, int tempIndex)
+	{
+		String temp;
+		
+		for (int i = 0; i < names.length; i++)
+		{
+			int indexToSwap = findNext(names, i);
+			temp = names[i];
+			names[i] = names[indexToSwap];
+			names[indexToSwap] = temp;
+		}
+		
+
+		return names;
+	}
+	
+	public static int findNext(String[] names, int firstIndex)
+	{
+		String temp;
+		int tempIndex = 0;
+		int i = 0;
+		for (i = firstIndex; i < names.length -1; i++)
+		{
+			if (names[firstIndex].compareToIgnoreCase(names[firstIndex + 1]) > 0)
+			{
+				temp = names[firstIndex];
+				names[firstIndex] = names[firstIndex + 1];
+				names[firstIndex + 1] = temp;
+				tempIndex = i;
+			}
+		}
+		return tempIndex;
+	}
+		
+}
+	
+
+/*public static void putInOrder(String names[])
+{
+	String temp;
+	
+	for (int i = 0; i < names.length; i++)
+	{
+		for (int j =  i + 1; j < names.length; j++)
+		{
+			if (names[i].compareToIgnoreCase(names[j]) > 0)
+			{
+				temp = names[i];
+				names[i] = names[j];
+				names[j] = temp;
+			}
+		}
+	}
+}*/	
+	
+	
+	
+	
+	
+	
+	/*
+	static ArrayList<String> sorted_names = new ArrayList<String>();
+
+	
+	public static void main(String[] args)
+	{
+
+		try
+		{
+		ArrayList<String> names = getList();
+		}
+		catch (IOException names)
+		{
+			System.out.println("Error");
+		}
+		
+	}
+	public static ArrayList<String> getList() throws IOException
+	{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		ArrayList<String> names = new ArrayList<String>();
+		
+		for (int i = 0; i < 3; i++)
+		{
+			String input = br.readLine();
+			names.add(input);
+
+		}
+		System.out.println(names);
+		return names;
+	}
+	public static int findNext(ArrayList<String> names, int index)
+	{
+		for(int i = 1; i < names.size(); i++)
+		{
+			if(names.get(index).compareTo(names.get(index -1)) < 0)
+			{
+				sorted_names.add(names.get(index)); 
+			}
+		}
+		
+		return 0;
+	}
+	public static String[] putInOrder(String[] arr, int index1, int index2)
+	{
+		return arr;
+	}
+	public static void printArray(String arr)
+	{
+		
+	}*/
