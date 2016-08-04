@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+public class SortList
+{
+	public static void main(String[] args)
+	{
+		Scanner in = new Scanner(System.in);
+		
+		ArrayList<String> inputs = new ArrayList<String>();
+		
+		while(in.hasNextLine())
+		{
+			inputs.add(in.nextLine());
+		}
+		
+	}
+	public static int findNext(String[] arr)
+	{
+		return 0;
+	}
+	public static String[] putInOrder(String[] arr, int index1, int index2)
+	{
+		return arr;
+	}
+	public static void printArray(String arr)
+	{
+		
+	}
+}

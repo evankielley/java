@@ -1,0 +1,7 @@
+public class ContainerTester
+{
+	public static void main(String[] args)
+	{
+		FrustumContainer frusty = new FrustumContainer();
+	}
+}

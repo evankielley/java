@@ -1,0 +1,102 @@
+!SESSION 2016-06-09 13:07:22.231 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_91
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_CA
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2016-06-09 13:08:00.883
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: Service Temporarily Unavailable. ; version: 1.100.0.v20160217-0435
+!STACK 0
+org.apache.http.client.HttpResponseException: Service Temporarily Unavailable
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.HttpResponses$ProgressMonitorResponseHandler.handleResponse(HttpResponses.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.HttpResponses$ProgressMonitorResponseStringHandler.handleResponse(HttpResponses.java:92)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.HttpResponses$ProgressMonitorResponseStringHandler.handleResponse(HttpResponses.java:1)
+	at org.apache.http.client.fluent.Response.handleResponse(Response.java:90)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.HttpResponses.getContentWithProgress(HttpResponses.java:55)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:69)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Thread.java:745)
+!SESSION 2016-06-09 13:46:04.044 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_91
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_CA
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.help.base 4 4 2016-06-09 17:10:57.148
+!MESSAGE Help documentation could not be indexed completely.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2016-06-09 17:10:57.148
+!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.ui.examples.javaeditor/doc-html/ui_templateeditor_ex.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2016-06-09 17:10:57.148
+!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples.ole.win32/doc-html/swt_ole_ex.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2016-06-09 17:10:57.148
+!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.compare.examples.xml/doc-html/ui_xmlcompare_ex.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2016-06-09 17:10:57.148
+!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples/doc-html/swt_javaviewer_ex.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2016-06-09 17:10:57.148
+!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.team.examples.filesystem/doc-html/team_model_ex.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2016-06-09 17:10:57.148
+!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples/doc-html/swt_addressbook_ex.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2016-06-09 17:10:57.148
+!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples.layouts/doc-html/swt_layout_ex.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2016-06-09 17:10:57.148
+!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples.controls/doc-html/swt_customcontrols_ex.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2016-06-09 17:10:57.148
+!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples/doc-html/swt_imageanalyzer_ex.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2016-06-09 17:10:57.149
+!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples/doc-html/swt_hoverhelp_ex.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2016-06-09 17:10:57.149
+!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples/doc-html/swt_manual_setup.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2016-06-09 17:10:57.149
+!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.team.examples.filesystem/doc-html/team_filesystem_ex.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2016-06-09 17:10:57.149
+!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples.browser/doc-html/swt_browser_ex.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2016-06-09 17:10:57.149
+!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples.controls/doc-html/swt_controls_ex.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2016-06-09 17:10:57.149
+!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.ui.examples.undo/doc-html/ui_undo_ex.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2016-06-09 17:10:57.149
+!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.ui.examples.fieldassist/doc-html/ui_fieldassist_ex.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2016-06-09 17:10:57.149
+!MESSAGE Help document /org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/ole/win32/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2016-06-09 17:10:57.149
+!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.compare.examples/doc-html/ui_structurecreator_ex.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2016-06-09 17:10:57.149
+!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples/doc-html/swt_fileviewer_ex.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2016-06-09 17:10:57.149
+!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.ui.examples.propertysheet/doc-html/ui_propertysheet_ex.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2016-06-09 17:10:57.149
+!MESSAGE Help document /org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/opengl/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2016-06-09 17:10:57.149
+!MESSAGE Help document /org.eclipse.platform.doc.isv/reference/api/org/eclipse/swt/awt/package-summary.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2016-06-09 17:10:57.149
+!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.ui.examples.readmetool/doc-html/ui_readmetool_ex.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2016-06-09 17:10:57.149
+!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples/doc-html/swt_clipboard_ex.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2016-06-09 17:10:57.149
+!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.ui.examples.javaeditor/doc-html/ui_javaeditor_ex.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2016-06-09 17:10:57.149
+!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples/doc-html/swt_helloworld_ex.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2016-06-09 17:10:57.149
+!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples.launcher/doc-html/swt_launcher_ex.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2016-06-09 17:10:57.149
+!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.team.examples.filesystem/doc-html/team_localhistory_ex.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2016-06-09 17:10:57.149
+!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples.paint/doc-html/swt_paint_ex.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2016-06-09 17:10:57.149
+!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.ui.examples.multipageeditor/doc-html/ui_multipageeditor_ex.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2016-06-09 17:10:57.149
+!MESSAGE Help document /org.eclipse.platform.doc.isv/samples/org.eclipse.swt.examples/doc-html/swt_texteditor_ex.html cannot be opened.
+!SESSION 2016-07-04 15:42:56.027 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_91
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_CA
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-07-04 15:42:57.649
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.

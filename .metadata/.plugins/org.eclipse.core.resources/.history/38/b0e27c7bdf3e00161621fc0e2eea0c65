@@ -1,0 +1,36 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+public class SortList
+{
+	public static void main(String[] args)
+	{
+		Scanner in = new Scanner(System.in);
+		
+		ArrayList<String> inputs = new ArrayList<String>();
+		
+		System.out.println("Go");
+		
+		String bob = in.nextLine();
+		
+		while(bob != "q")
+		{
+			bob = in.nextLine();
+			inputs.add(bob);
+
+		}
+		System.out.println(inputs);
+		
+	}
+	public static int findNext(String[] arr)
+	{
+		return 0;
+	}
+	public static String[] putInOrder(String[] arr, int index1, int index2)
+	{
+		return arr;
+	}
+	public static void printArray(String arr)
+	{
+		
+	}
+}

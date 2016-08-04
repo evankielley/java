@@ -1,0 +1,14 @@
+public class SalesTester
+{
+	public static void main(String[] args)
+	{
+		SalesTransaction one = new SalesTransaction("Small", 10.0, 10);
+		one.printStats(one);
+		
+		SalesTransaction two = new SalesTransaction("Medium", 20.0, 30);
+		two.printStats(two);
+		
+		SalesTransaction three = new SalesTransaction("Large", 30.0, 40);
+		three.printStats(three);
+	}
+}

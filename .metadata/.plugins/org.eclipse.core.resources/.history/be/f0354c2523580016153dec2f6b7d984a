@@ -1,0 +1,34 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class StudentGPAs
+{
+	public static ArrayList<String> students = new ArrayList<String>();
+	public static ArrayList<Integer> student_numbers = new ArrayList<Integer>();
+	public static ArrayList<Double> quiz_marks = new ArrayList<Double>();
+
+	public static void main(String[] args)
+	{
+		try 
+		{
+			Scanner file_input = new Scanner(new File("students.txt"));
+			while (file_input.hasNext())
+			{
+			students.add(file_input.next());
+			student_numbers.add(file_input.nextInt());
+			quiz_marks.add(file_input.nextDouble());
+			}
+		} 
+		catch (FileNotFoundException e) 
+		{
+			System.out.println("Missing file.");
+		}
+	}
+	public static void printer (int student_number, double gpa)
+	{
+		System.out.println("Student number: " + student_number + " GPA: " + gpa);
+	}
+	
+}

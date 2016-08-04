@@ -1,0 +1,86 @@
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+public class PracticeQuestions
+{
+	public static void main(String[] args) throws IOException
+	{
+		System.out.println("Enter one of the following commands to answer questions about that region (or hit 4 to exit):");
+		System.out.println("1 - world");
+		System.out.println("2 - canada");
+		System.out.println("3 - atlantic");
+		System.out.println("4 - exit");
+		Scanner scanchoice = new Scanner(System.in);
+		System.out.println();
+		int choice = scanchoice.nextInt();		
+		while (choice != 4) 
+		{
+		    if (choice == 1) 
+		    {
+		        String break_word = "CANADA";
+		        findTheRegion(break_word);
+		        
+		    }
+		    else if (choice == 2) 
+		    {
+		        String break_word = "NOVA SCOTIA";
+		        findTheRegion(break_word);
+		    }
+		    else if (choice == 3) 
+		    {
+		        String break_word = "NEWFOUNDLAND";
+		        findTheRegion(break_word);
+		    }
+		    else if (choice == 4) 
+		    {
+		        break;
+		    }
+		    else
+		    {
+		        System.out.println("Enter \"1\", \"2\", \"3\" or \"4\"");
+		        choice = scanchoice.nextInt();
+		    }
+		    scanchoice.close();
+		}   
+	}
+	public static void findTheRegion(String break_word) throws IOException
+	{
+		Scanner user_input = new Scanner(System.in);
+		BufferedReader read = new BufferedReader(new FileReader("questions.txt"));
+		String line = "";
+		ArrayList<String> questions = new ArrayList<String>();
+		ArrayList<String> answers = new ArrayList<String>();
+		int counter = 0;
+	
+		while (!line.contains(break_word))
+		{
+			line = read.readLine();
+			String[] split = line.split(">>");
+			questions.add(split[0]);
+			answers.add(split[1]);
+		}
+		for (int i = 1; i < (questions.size() - 1); i++)
+		{
+			
+			System.out.println(questions.get(i));
+			String user_answer = user_input.nextLine();
+			if (user_answer.toLowerCase().equals(answers.get(i).toLowerCase()))
+			{
+				System.out.println("Correct!");
+				counter++;	
+			}
+			else
+			{
+				System.out.print("No, the answer is: ");
+				System.out.println(answers.get(i));
+	
+			}
+		}
+		double grade = ((counter / (questions.size()-2)) * 100);
+		System.out.println("You got " + grade + "% correct");
+	}
+}
